@@ -1,0 +1,115 @@
+.notifly-container {
+
+	-webkit-transition: all .2s;
+    transition: all .2s;
+
+    transform:translateY(-550px);
+
+	position:fixed;
+	width:95%;
+	min-height:200px;
+	left:2.5%;
+	border-radius:8px;
+	box-shadow:0px 2px 10px 3px #a0a0a0;
+	opacity:0;
+	top:10px;
+
+}
+
+.notifly-container .notifly-header {
+
+	position:absolute;
+	width:calc(100% - 10px);
+	height:35px;
+	padding:5px;
+
+}
+
+.notifly-container .notifly-header .notifly-header-title {
+
+	position:absolute;
+	left:0;
+	height:35px;
+	padding:5px;
+	font-weight:bold;
+	font-size:24px;
+
+}
+
+.notifly-container .notifly-header .notifly-header-controls {
+
+	position:absolute;
+	right:0;
+	height:35px;
+
+}
+
+.notifly-container .notifly-header .notifly-header-controls .notifly-header-controls-control {
+
+	width:25px;
+	height:25px;
+	float:right;
+	margin-right:5px;
+	cursor:pointer;
+
+}
+
+.notifly-container .notifly-body {
+
+	position:absolute;
+	top:35px;
+	padding:5px;
+	width:calc(100% - 10px);
+
+}
+
+.notifly-shown {
+
+	opacity:1;
+	transform:none;
+
+}
+
+.notifly-gone {
+
+	opacity:0;
+	transform:translateY(150px);
+
+}
+
+/*Minimized state*/
+.notifly-minimized {
+
+	width:200px;
+	height:35px;
+	min-height:35px;
+	top:calc(100% - 35px);
+	float:left;
+
+}
+
+.notifly-minimized .notifly-body {
+
+	display:none;
+
+}
+
+.notifly-minimized .notifly-header .notifly-header-title {
+
+	font-size:14px;
+	width:65%;
+	overflow:hidden;
+
+}
+
+/*Themes*/
+.notifly-chrome {
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+	background: #f5f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+
+}
