@@ -300,11 +300,13 @@ $(document).ready(function() {
 	// is all you need for the functionality
 	// that you see on the screen.
 	// The above code is just generating a dummy table for the body of the modal
+	console.log(table);
 	$("#notifly").notifly(true, {
 
 		title : "This is my test Modal",
 		controls : ["close", "minimize"],
-		body : "test"
+		theme : "minimalist",
+		body : table
 
 	});
 
@@ -314,6 +316,7 @@ $(document).ready(function() {
 
 	}, 1000);
 
+	console.log(table);
 	$("#notifly2").notifly(true, {
 
 		title : "This is my test Modal",
@@ -332,6 +335,22 @@ $(document).ready(function() {
 			$("#notifly2").notifly("updateTitle", "This is the new title");
 
 		}, 2000);
+
+	}, 1000);
+
+	console.log(table);
+	$("#notifly3").notifly(true, {
+
+		title : "This is my test Modal",
+		controls : ["close", "minimize"],
+		theme : "minimalist",
+		body : table
+
+	});
+
+	setTimeout(function() {
+
+		$("#notifly3").notifly("show");
 
 	}, 1000);
 

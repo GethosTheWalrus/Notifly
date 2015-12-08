@@ -5,20 +5,22 @@
 
     transform:translateY(-550px);
 
-	position:fixed;
+	position:relative;
 	width:95%;
 	min-height:200px;
+	height:auto;
 	left:2.5%;
 	border-radius:8px;
 	box-shadow:0px 2px 10px 3px #a0a0a0;
 	opacity:0;
 	top:10px;
+	margin-bottom:15px;
 
 }
 
 .notifly-container .notifly-header {
 
-	position:absolute;
+	position:relative;
 	width:calc(100% - 10px);
 	height:35px;
 	padding:5px;
@@ -56,8 +58,8 @@
 
 .notifly-container .notifly-body {
 
-	position:absolute;
-	top:35px;
+	position:relative;
+	margin-bottom:15px;
 	padding:5px;
 	width:calc(100% - 10px);
 
@@ -80,6 +82,7 @@
 /*Minimized state*/
 .notifly-minimized {
 
+	position:fixed;
 	width:200px;
 	height:35px;
 	min-height:35px;
@@ -99,17 +102,5 @@
 	font-size:14px;
 	width:65%;
 	overflow:hidden;
-
-}
-
-/*Themes*/
-.notifly-chrome {
-
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
-	background: #f5f6f6; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
 
 }
