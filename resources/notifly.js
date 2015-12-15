@@ -295,18 +295,52 @@ $(document).ready(function() {
 
 	}
 
+	var table2 = document.createElement("table");
+	var headerRow = document.createElement("tr");
+
+	for( var i = 0; i < 5; i++ ) {
+
+		var headerCell = document.createElement("th");
+		headerCellText = document.createTextNode("Header " + i);
+
+		headerCell.appendChild(headerCellText);
+		headerRow.appendChild(headerCell);
+
+	}
+
+	table2.appendChild(headerRow);
+
+	for( var i = 0; i < 5; i++ ) {
+
+		var tableRow = document.createElement("tr");
+
+		for( var j = 0; j < 5; j++ ) {
+
+			var cell = document.createElement("td");
+			var cellText = document.createTextNode(i + " - " + j);
+
+			cell.appendChild(cellText);
+			tableRow.appendChild(cell);
+
+		}
+
+		table2.appendChild(tableRow);
+
+	}
+
 	// This is all of the plugin code.
 	// This is 2 modals, so half of this code
 	// is all you need for the functionality
 	// that you see on the screen.
 	// The above code is just generating a dummy table for the body of the modal
-	console.log(table);
+
+	// First modal
 	$("#notifly").notifly(true, {
 
-		title : "This is my test Modal",
+		title : "Just some text",
 		controls : ["close", "minimize"],
 		theme : "minimalist",
-		body : table
+		body : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 
 	});
 
@@ -316,13 +350,13 @@ $(document).ready(function() {
 
 	}, 1000);
 
-	console.log(table);
+	// Second modal
 	$("#notifly2").notifly(true, {
 
-		title : "This is my test Modal",
+		title : "Maybe a chrome themed modal?",
 		controls : ["minimize"],
 		theme : "chrome",
-		body : table
+		body : table2
 
 	});
 
@@ -330,18 +364,12 @@ $(document).ready(function() {
 
 		$("#notifly2").notifly("show");
 
-		setTimeout(function() {
-
-			$("#notifly2").notifly("updateTitle", "This is the new title");
-
-		}, 2000);
-
 	}, 1000);
 
-	console.log(table);
+	// Third modal
 	$("#notifly3").notifly(true, {
 
-		title : "This is my test Modal",
+		title : "Minimalist theme? Why not!",
 		controls : ["close", "minimize"],
 		theme : "minimalist",
 		body : table
@@ -351,6 +379,38 @@ $(document).ready(function() {
 	setTimeout(function() {
 
 		$("#notifly3").notifly("show");
+
+	}, 1000);
+
+	// Fourth modal
+	$("#notifly4").notifly(true, {
+
+		title : "Some stats and/or graphs",
+		controls : ["close", "minimize"],
+		theme : "minimalist",
+		body : "<img style='width:40%;' src='resources/img/pie.jpg'><img style='width:40%;' src='resources/img/line.jpg'>"
+
+	});
+
+	setTimeout(function() {
+
+		$("#notifly4").notifly("show");
+
+	}, 1000);
+
+	// Fifth modal
+	$("#notifly5").notifly(true, {
+
+		title : "Some stats and/or graphs",
+		controls : ["close", "minimize"],
+		theme : "custom",
+		body : "Custom Themes!!!"
+
+	});
+
+	setTimeout(function() {
+
+		$("#notifly5").notifly("show");
 
 	}, 1000);
 
